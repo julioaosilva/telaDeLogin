@@ -1,0 +1,20 @@
+.select-container{
+    height: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 290px;
+    background-color: #f0f0f0;
+    padding-left: 15px;
+    margin: 10px;
+    justify-content: center;
+}
+
+.select-style{
+    height: 25px;
+    width: 70%;
+    border: none;
+    margin-left: 5px;
+    background-color: var(--color-backg-login);
+    /*outline: none;  linha que contorna o input ao clicar nele*/
+}

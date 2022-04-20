@@ -1,0 +1,25 @@
+.input-login-container {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 290px;
+    background-color: #f0f0f0;
+    padding-left: 15px;
+    margin: 10px;
+}
+
+.input-login-style {
+    height: 25px;
+    width: 80%;
+    margin-left: 10px;
+    border: none;
+    background-color: var(--color-backg-login);
+    /*outline: none;  linha que contorna o input ao clicar nele*/
+    
+}
+
+.input-password {
+    background: url("../../../images/iconEye.png") #f0f0f0;
+}
+

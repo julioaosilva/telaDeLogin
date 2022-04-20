@@ -1,0 +1,18 @@
+tela de login:
+	input nome de usu�rio:
+		minimo de caracteres 6
+		maximo de caracteres 15
+		minimo de caracteres 
+		usar letras e n�meros (exress�o regular)
+		campo obrigt�rio
+	input senha: 
+		minimo de caracteres 8
+		maximo de caracteres 15
+		usar pelo menos uma letra maiuscula, numeros, simbolos e letras minusculas (express�o regular)
+		campo obrigatorio	
+	
+	-fazer texto abaixo do botao entrar "usu�rio nao cadastrado".
+-----------------------------------------------------------------------------------------------------------
+ver o o porque está renderizando 101 sem parar (localhost:300/ws)
+
+fonte do icone do olho senha <a target="_blank" href="https://icons8.com/icon/85028/eye">Eye</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>

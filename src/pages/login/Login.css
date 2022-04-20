@@ -1,0 +1,38 @@
+.login-obrigatorio{
+    color: #f00;
+    font: var(--font-campo-obrigatorio);
+}
+
+.login-text{
+    text-align: center;
+}
+
+.login-link{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.login-icon-eye{
+    width:25px ;
+    height: 25px;
+    margin: 0 7px;
+    cursor: pointer;
+}
+.login-icon-show-password{
+    background: url("../../images/iconEye.png") no-repeat;
+}
+
+.login-icon-hidden-password{
+    background: url("../../images/iconEyeClosed.png") no-repeat;
+}
+
+.login-input-user{
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    height: 75px;
+    align-items: center;
+}
