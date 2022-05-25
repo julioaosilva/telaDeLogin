@@ -17,6 +17,7 @@ const InputLogin = (props) => {
                 value={props.value}
                 onChange={props.onChange}
                 onKeyUp={props.onKeyUp}
+                onKeyDown={props.onKeyDown}
                 label={props.label}
                 aria-label={props.ariaLabel}
                 

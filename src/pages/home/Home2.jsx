@@ -14,13 +14,23 @@ const Home = () =>{
     }
    
     useEffect(() => {
-        //setItem(estoque)   
+        setItem(estoque)   
    },[])
 
     return(
         <>
         <h1>Bem-vindo!</h1>
         <button onClick = {exit}>sair</button>
+        
+        <div className="home-list">
+            <Search />
+            {item.map(i => {
+                console.log(i)
+                return (
+                    <ListItem item= {i.produto} key= {i.id}/>
+                )
+            })}            
+        </div>       
         </>
     )
 }

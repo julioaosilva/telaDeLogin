@@ -3,17 +3,25 @@ import "./Cadastro.css";
 import FormCadastro from "../../components/forms/formCadastro/FormCadastro";
 import InputLogin from "../../components/input/inputLogin/InputLogin";
 import Select from "../../components/select/Select";
-import { setor } from "../../data/selectOptions/selectOptions";
+import { setor } from "../shared/data/selectOptions/selectOptions";
 import Footer from "../../components/footer/Footer";
 import ButtonLogin from "../../components/buttons/buttonLogin/ButtonLogin";
-import LabelDefault from "../../components/label/LabelDefault";
+import LabelDefault from "../../components/label/LabelDefault"; 
+import {register} from 'react-hook-form';
 
 const Cadastro = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showPwAgain, setShowPwAgain] = useState(false);
     const [createPassword, setCreatePassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");
+    const [name, setName] = useState("");
+    const [matricula, setMatricula] = useState("");
+    const [email, setEmail] = useState("");
     const [telephone, setTelephone] = useState("");
+    const [userName, setUsername] = useState("");
+    const [select, setSelect] = useState("");
+    const [password, setPassword] = useState("");
+    const [passwordAgain, setPasswordAgain] = useState("");
 
     function openCloseEyes() {
         setShowPassword(!showPassword);
@@ -43,7 +51,6 @@ const Cadastro = () => {
         if(pesquisaTel){
             campoTel.value = "";
         }
-
     }
 
     return (

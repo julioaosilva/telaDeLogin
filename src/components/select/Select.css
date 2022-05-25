@@ -1,4 +1,4 @@
-.select-container{
+.select-container {
     height: 35px;
     width: 100%;
     display: flex;
@@ -10,11 +10,15 @@
     justify-content: center;
 }
 
-.select-style{
+.select-style {
     height: 25px;
     width: 70%;
     border: none;
     margin-left: 5px;
     background-color: var(--color-backg-login);
-    /*outline: none;  linha que contorna o input ao clicar nele*/
+    outline-color:#868686;
+}
+
+.select-style:focus {
+    background-color: #e7e7e7;
 }

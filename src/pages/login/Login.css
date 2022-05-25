@@ -22,11 +22,11 @@
     cursor: pointer;
 }
 .login-icon-show-password{
-    background: url("../../images/iconEye.png") no-repeat;
+    background: url("../../assets/images/iconEye.png") no-repeat;
 }
 
 .login-icon-hidden-password{
-    background: url("../../images/iconEyeClosed.png") no-repeat;
+    background: url("../../assets/images/iconEyeClosed.png") no-repeat;
 }
 
 .login-input-user{

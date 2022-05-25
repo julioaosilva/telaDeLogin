@@ -3,10 +3,10 @@ import "./FormLogin.css";
 
 const FormLogin = (props) => {
     return (
-        <div className="form-login-container shadow-default">
+        <form className="form-login-container shadow-default" onSubmit={props.onSubmit}>
             <h1>Login</h1>
             {props.children}
-        </div>
+        </form>
     )
 }
 export default FormLogin;
