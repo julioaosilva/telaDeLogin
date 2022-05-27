@@ -20,7 +20,7 @@ const Login = (props) => {
     const getUserName = (a) => {
         setUserName(a.target.value);
     }
-
+console.log(userName)
     const getPassword = (a) => {
         setPassWord(a.target.value);
     }
@@ -35,10 +35,12 @@ const Login = (props) => {
             }
         }
     }
+
     const enter = () => {     
         if (userName.length >= 6 && userName !== "" && passWord.length >= 8 && passWord !== "") {
-                redirect("/inicio")
-            } else {
+                redirect("/inicio", {state: userName})
+            } 
+            else {
                 setObrigatorio(true);
             }
     }

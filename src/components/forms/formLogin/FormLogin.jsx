@@ -1,11 +1,11 @@
 import React from "react";
 import "./FormLogin.css";
 
-const FormLogin = (props) => {
+const FormLogin = ({onSubmit, children}) => {
     return (
-        <form className="form-login-container shadow-default" onSubmit={props.onSubmit}>
+        <form className="form-login-container shadow-default" onSubmit={onSubmit}>
             <h1>Login</h1>
-            {props.children}
+            {children}
         </form>
     )
 }
