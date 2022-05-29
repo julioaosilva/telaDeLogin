@@ -1,11 +1,12 @@
-import React from "react";
-import "./ButtonLogin.css";
+import React from 'react';
+import './ButtonLogin.css';
 
-const ButtonLogin = ({onClick, onKeyDown, text }) => {
+const ButtonLogin = ({onClick, onKeyDown, text, type }) => {
     return (
-        <button className="button-login-style shadow-default" onClick={onClick} onKeyDown={onKeyDown}>
+        <button className='button-login-style shadow-default' type={type} onClick={onClick} onKeyDown={onKeyDown}>
             {text}
         </button>
     )
 }
-export default ButtonLogin;
+
+export default ButtonLogin

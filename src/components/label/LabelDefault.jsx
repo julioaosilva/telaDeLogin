@@ -11,4 +11,5 @@ const LabelDefault = (props) => {
         </>
     )
 }
-export default LabelDefault;
+
+export default LabelDefault

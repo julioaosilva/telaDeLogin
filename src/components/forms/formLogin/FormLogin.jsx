@@ -9,4 +9,5 @@ const FormLogin = ({onSubmit, children}) => {
         </form>
     )
 }
-export default FormLogin;
+
+export default FormLogin

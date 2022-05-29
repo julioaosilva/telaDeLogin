@@ -3,45 +3,44 @@ import "./Cadastro.css";
 import FormCadastro from "../../components/forms/formCadastro/FormCadastro";
 import InputLogin from "../../components/input/inputLogin/InputLogin";
 import Select from "../../components/select/Select";
-import { setor } from "../shared/data/selectOptions/selectOptions";
+import { setor } from "../../shared/mockData/selectOptions/selectOptions";
 import Footer from "../../components/footer/Footer";
 import ButtonLogin from "../../components/buttons/buttonLogin/ButtonLogin";
-import LabelDefault from "../../components/label/LabelDefault"; 
-import {register} from 'react-hook-form';
 
 const Cadastro = () => {
-    const [showPassword, setShowPassword] = useState(false);
-    const [showPwAgain, setShowPwAgain] = useState(false);
-    const [createPassword, setCreatePassword] = useState("");
-    const [repeatPassword, setRepeatPassword] = useState("");
-    const [name, setName] = useState("");
-    const [matricula, setMatricula] = useState("");
-    const [email, setEmail] = useState("");
-    const [telephone, setTelephone] = useState("");
-    const [userName, setUsername] = useState("");
-    const [select, setSelect] = useState("");
-    const [password, setPassword] = useState("");
-    const [passwordAgain, setPasswordAgain] = useState("");
+    const [showPassword, setShowPassword] = useState(false)
+    const [showPwAgain, setShowPwAgain] = useState(false)
+    const [createPassword, setCreatePassword] = useState("")
+    const [repeatPassword, setRepeatPassword] = useState("")
+    const [name, setName] = useState("")
+    const [matricula, setMatricula] = useState("")
+    const [email, setEmail] = useState("")
+    const [telephone, setTelephone] = useState("")
+    const [userName, setUsername] = useState("")
+    const [select, setSelect] = useState("")
+    const [password, setPassword] = useState("")
+    const [passwordAgain, setPasswordAgain] = useState("")
 
     function openCloseEyes() {
-        setShowPassword(!showPassword);
+        setShowPassword(!showPassword)
     }
+    
     function openCloseEyesRepeat() {
-        setShowPwAgain(!showPwAgain);
+        setShowPwAgain(!showPwAgain)
     }
-
 
     function getPassword(e) {
-        setCreatePassword(e.target.value);
+        setCreatePassword(e.target.value)
     }
-    function getRepeatPassword(e) {
-        setRepeatPassword(e.target.value);
-    }
-    function getTelephone(e) {
-         setTelephone(e.target.value);
-        
 
+    function getRepeatPassword(e) {
+        setRepeatPassword(e.target.value)
     }
+
+    function getTelephone(e) {
+         setTelephone(e.target.value)
+    }
+
     const validarTelefone = (e) => {
         const text = "e345"
         const patternTel = /[^0-9]/g;
@@ -53,9 +52,13 @@ const Cadastro = () => {
         }
     }
 
+    const onSubmit = (event) => {
+        event.preventDefault()
+    }
+
     return (
         <>
-            <FormCadastro>
+            <FormCadastro onSubmit={()=>{}}>
                 <section className="cadastro-container">
                     <div className="cadastro-input">
                         <div className="cadastro-input-items">
@@ -74,7 +77,7 @@ const Cadastro = () => {
                         </div>
                         <div className="cadastro-input-items">
                             <InputLogin type="text" placeholder="Telefone (apenas números)"  onChange={getTelephone} />
-                           { /[^0-9]/ && <span className="login-obrigatorio login-text">campo obrigatório </span>}
+                           {<span className="login-obrigatorio login-text">campo obrigatório </span>}
                         </div>
                     </div>
                     <div className="cadastro-input">
@@ -104,13 +107,13 @@ const Cadastro = () => {
                         </div>
                     </div>
                     <div className="cadastro-btn">
-                        <ButtonLogin text="Cadastrar" />
+                        <ButtonLogin text="Cadastrar" type="submit" />
                     </div>
                 </section>
             </FormCadastro>
-
             <Footer />
         </>
     )
 }
-export default Cadastro;
+
+export default Cadastro

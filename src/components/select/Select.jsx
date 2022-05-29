@@ -1,14 +1,14 @@
-import React from "react";
-import "./Select.css";
+import React from "react"
+import "./Select.css"
 
 const Select = (props) => {
-    const options = props.options;
-    const createLabel = props.label;
+    const options = props.options
+    const createLabel = props.label
     const selectOptions = options.map((opt) => {
         return (
             <option className="select-option" key={opt.id}>{opt.name}</option>
         )
-    });
+    })
 
     return (
         <div className="select-container shadow-default">
@@ -18,5 +18,6 @@ const Select = (props) => {
             </select>
         </div>
     )
-};
-export default Select;
+}
+
+export default Select

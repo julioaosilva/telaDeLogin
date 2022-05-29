@@ -2,6 +2,7 @@ import React from "react";
 import "./MenuMobile.css";
 
 const MenuMobile = ()=>{
+
     return(
         <nav className="menu-mobile-nav">
             <ul className="menu-mobile-ul">
@@ -13,4 +14,5 @@ const MenuMobile = ()=>{
         </nav>
     )
 }
-export default MenuMobile;
+
+export default MenuMobile

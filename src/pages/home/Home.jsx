@@ -3,8 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = () =>{
-    const redirect = useNavigate();
-    const location = useLocation();
+    const redirect = useNavigate()
+    const location = useLocation()
 
     const exit = ()=>{
         redirect("/login")
@@ -18,4 +18,5 @@ const Home = () =>{
         </>
     )
 }
-export default Home;
+
+export default Home

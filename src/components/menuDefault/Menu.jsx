@@ -2,6 +2,7 @@ import React from "react";
 import "./Menu.css";
 
 const Menu = ()=>{
+
     return(
         <nav className="menu-nav">
             <ul className="menu-ul">
@@ -13,4 +14,5 @@ const Menu = ()=>{
         </nav>
     )
 }
-export default Menu;
+
+export default Menu

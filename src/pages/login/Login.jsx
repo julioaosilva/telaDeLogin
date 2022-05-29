@@ -7,20 +7,21 @@ import Footer from "../../components/footer/Footer";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = (props) => {
-    const [isShow, setIsShow] = useState(false);
-    const [obrigatorio, setObrigatorio] = useState(false);
-    const [userName, setUserName] = useState("");
-    const [passWord, setPassWord] = useState("");
-    const redirect = useNavigate();
+    const [isShow, setIsShow] = useState(false)
+    const [obrigatorio, setObrigatorio] = useState(false)
+    const [userName, setUserName] = useState("")
+    const [passWord, setPassWord] = useState("")
+    const redirect = useNavigate()
 
     const openCloseEyes = () => {
         setIsShow(!isShow)
-    };
+    }
 
     const getUserName = (a) => {
         setUserName(a.target.value);
     }
-console.log(userName)
+
+// console.log(userName)
     const getPassword = (a) => {
         setPassWord(a.target.value);
     }
@@ -31,26 +32,29 @@ console.log(userName)
             if (valueKey && userName.length >= 6 && userName !== "" && passWord.length >= 8 && passWord !== "") {
                 redirect("/inicio")
             } else {
-                setObrigatorio(true);
+                setObrigatorio(true)
             }
         }
     }
 
-    const enter = () => {     
+    const handleSubmit = (event) => {
+        event.preventDefault()
         if (userName.length >= 6 && userName !== "" && passWord.length >= 8 && passWord !== "") {
+                console.log('clicou', {user: userName, senha: passWord})
                 redirect("/inicio", {state: userName})
-            } 
+            }
             else {
-                setObrigatorio(true);
+                setObrigatorio(true)
             }
     }
 
     useEffect(() => {
-        console.log("renderizei");
-    }, []);
+        console.log("renderizei")
+    }, [])
+
     return (
         <>
-            <FormLogin >
+            <FormLogin onSubmit={handleSubmit}>
                 {/* {<span className="login-obrigatorio login-text"> usuário não cadastrado</span>} */}
                 <div className="login-input-user">
                     <InputLogin type="text" placeholder="Nome de usuário" id="input-login-user" autoFocus={true} maxLength={15} value={userName}
@@ -66,7 +70,7 @@ console.log(userName)
                     {passWord && passWord.length < 8 && <span className="login-obrigatorio login-text"> use 8 caracteres ou mais!</span>}
                     {obrigatorio && !passWord && <span className="login-obrigatorio login-text">campo obrigatório</span>}
                 </div>
-                <ButtonLogin text="Entrar" onClick={enter} />
+                <ButtonLogin text="Entrar" type= "submit" />
                 <div className="login-link">
                     <p className="login-text">
                         <Link to="/cadastro" style={{ textDecoration: "none", fontWeight: "bold", color: "black", padding: "10px", cursor: "poiter" }}>Cadastre-se</Link>
@@ -78,6 +82,7 @@ console.log(userName)
             </FormLogin>
             <Footer />
         </>
-    );
-};
-export default Login;
+    )
+}
+
+export default Login

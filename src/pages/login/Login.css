@@ -21,6 +21,7 @@
     margin: 0 7px;
     cursor: pointer;
 }
+
 .login-icon-show-password{
     background: url("../../assets/images/iconEye.png") no-repeat;
 }
