@@ -12,9 +12,8 @@ const Rotas = () => {
             <Route path="/inicio" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/recuperar-senha" element={<ForgotPassword />} />
-            <Route path="/cadastro" element={<Cadastro />} />
-           
+            <Route path="/cadastro" element={<Cadastro />} />           
         </Routes >
     )
 }
-export default Rotas;
+export default Rotas
